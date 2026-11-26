@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{font-family:'DM Sans',sans-serif;color:#f5f6ff;background:#0c1224;font-synthesis:none}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 38%,#24345a 0%,#131d37 38%,#0b1122 78%);overflow-x:hidden;transition:.35s}
+body:before,body:after{content:"";position:fixed;border-radius:50%;filter:blur(2px);pointer-events:none;z-index:-1}
+body:before{width:360px;height:360px;background:#5a55d8;opacity:.16;top:12%;left:-180px}
+body:after{width:440px;height:440px;background:#23b8b0;opacity:.10;right:-220px;bottom:-170px}
+.page{width:min(1100px,calc(100% - 48px));min-height:100vh;margin:auto;display:flex;flex-direction:column}
+.topbar{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}
+.brand{font:700 13px Manrope,sans-serif;letter-spacing:3px;color:#f3f4ff;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand-mark{font-size:25px;color:#9f9aff}
+.top-actions{display:flex;align-items:center;gap:22px}
+.live,.eyebrow,.analog-title,footer,.timezone small,.utc small{font:500 10px 'DM Mono',monospace;letter-spacing:1.8px;color:#a9b2ce}
+.live{display:flex;align-items:center;gap:9px}
+.live i{width:7px;height:7px;background:#6de2bd;border-radius:50%;box-shadow:0 0 12px #6de2bd}
+.icon-btn{width:38px;height:38px;border-radius:50%;border:1px solid #ffffff30;background:#ffffff0d;color:#e7eaff;font-size:20px;cursor:pointer}
+.hero{text-align:center;padding:72px 0 42px;flex:1}
+.eyebrow{color:#9d9bf7;margin:0 0 17px}
+h1{font:600 clamp(34px,5vw,55px) Manrope,sans-serif;letter-spacing:-2px;margin:0;color:#f6f7ff}
+h1 em{font-style:normal;color:#aaa6ff}
+.subtitle{color:#aab4cf;font-size:14px;margin:14px 0 37px}
+.clock-card{width:min(610px,100%);margin:0 auto;padding:25px 34px 24px;border:1px solid #ffffff29;border-radius:22px;background:linear-gradient(135deg,#ffffff1b,#ffffff08);box-shadow:0 25px 80px #050a1b66,inset 0 1px #ffffff20;backdrop-filter:blur(22px);text-align:left;position:relative;overflow:hidden}
+.clock-card:before{content:"";position:absolute;width:240px;height:240px;right:-100px;top:-155px;border-radius:50%;background:#a29bff22;filter:blur(5px)}
+.card-top,.bottom-row{display:flex;justify-content:space-between;align-items:center}
+.timezone-label{font:500 10px 'DM Mono',monospace;letter-spacing:1.5px;color:#b8c2dc}
+.pin{color:#a6a1ff;font-size:16px;margin-right:5px}
+.format-btn{border:1px solid #ffffff35;background:#ffffff0b;color:#e2e5fa;border-radius:20px;padding:8px 13px;font:500 10px 'DM Mono',monospace;letter-spacing:1px;cursor:pointer}
+.format-btn span{color:#a7a1ff;margin-left:7px}
+.digital{display:flex;align-items:baseline;justify-content:center;padding:30px 0 8px;font:500 clamp(62px,11vw,100px) 'DM Mono',monospace;letter-spacing:-7px;color:#fff;text-shadow:0 0 35px #a9a3ff35}
+.colon{color:#a8a4ff;animation:blink 1s steps(2,start) infinite}
+.seconds{font-size:clamp(23px,4vw,34px);letter-spacing:-2px;color:#a9a5ff;margin-left:10px}
+.ampm{font:500 12px 'DM Mono',monospace;letter-spacing:1px;color:#c0c7df;margin-left:13px}
+.date-row{text-align:center;color:#b4bed8;font-size:13px;letter-spacing:.2px}
+.date-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#72dfc1;margin:0 8px 2px 0}
+.card-divider{height:1px;background:#ffffff1c;margin:25px 0 19px}
+.bottom-row{justify-content:space-between}
+.timezone{display:flex;align-items:center;gap:12px}
+.mini-icon{width:34px;height:34px;border-radius:11px;background:#a39dff20;color:#b7b1ff;display:grid;place-items:center;font-size:19px}
+.timezone small,.utc small{display:block;font-size:9px;margin-bottom:5px;color:#8996b7}
+.timezone strong,.utc strong{font:500 12px 'DM Mono',monospace;color:#e4e8fa}
+.utc{text-align:right}
+.analog-wrap{margin:34px auto 0;width:min(610px,100%);display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+.analog-title{font-size:9px;text-align:left}
+.analog-title span{color:#a6a0ff;font-size:14px;margin-left:6px}
+.analog-clock{width:96px;height:96px;border:1px solid #ffffff38;border-radius:50%;background:radial-gradient(circle at 35% 25%,#ffffff20,#ffffff05);box-shadow:0 8px 30px #050a1b50,inset 0 0 20px #ffffff0a;position:relative}
+.analog-clock:before{content:"";position:absolute;inset:7px;border:1px solid #ffffff12;border-radius:50%}
+.tick{position:absolute;background:#d5d8f4;width:2px;height:5px;left:47px;top:9px;transform-origin:1px 39px;opacity:.8}
+.t2{transform:rotate(90deg)}.t3{transform:rotate(180deg)}.t4{transform:rotate(270deg)}
+.hand{position:absolute;left:47px;bottom:47px;transform-origin:50% 100%;border-radius:5px}
+.hour-hand{height:23px;width:4px;background:#e8e8ff;transform:rotate(0deg)}
+.minute-hand{height:31px;width:3px;background:#aaa5ff;transform:rotate(0deg)}
+.second-hand{height:35px;width:1px;background:#6de2bd;transform:rotate(0deg)}
+.hub{position:absolute;width:7px;height:7px;border-radius:50%;background:#8ce6d0;left:44px;top:44px;box-shadow:0 0 8px #6de2bd}
+footer{height:66px;border-top:1px solid #ffffff12;display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#7885a7}
+footer b{color:#aaa5ff;margin-left:5px}
+body.light{color:#202846;background:radial-gradient(ellipse at 50% 35%,#e8eaff,#d9e2f5 55%,#cbd7ed)}
+body.light .topbar,body.light footer{border-color:#26365a20}
+body.light .brand,body.light h1{color:#202846}
+body.light .subtitle,body.light .date-row{color:#596681}
+body.light .clock-card{background:linear-gradient(135deg,#ffffffb8,#ffffff62);border-color:#ffffffb8;box-shadow:0 25px 70px #62749b35}
+body.light .digital{color:#202846;text-shadow:none}
+body.light .timezone-label,body.light .timezone strong,body.light .utc strong{color:#34415e}
+body.light .icon-btn,body.light .format-btn{color:#35415e;border-color:#53648b40;background:#ffffff55}
+body.light .analog-clock{background:#ffffff70;border-color:#ffffff}
+body.light .hour-hand{background:#34415e}
+body.light .live{color:#53617d}
+@keyframes blink{50%{opacity:.35}}
+@media(max-width:600px){.page{width:calc(100% - 32px)}.topbar{height:70px}.hero{padding:58px 0 28px}.subtitle{font-size:12px;margin-bottom:29px}.clock-card{padding:20px 18px}.digital{letter-spacing:-5px;padding-top:35px}.seconds{margin-left:6px}.ampm{margin-left:8px;font-size:10px}.analog-wrap{padding:0 8px}.analog-clock{width:82px;height:82px;transform:scale(.9)}.tick{left:40px}.hour-hand,.minute-hand,.second-hand{left:40px}.hub{left:37px;top:37px}footer{font-size:8px}}

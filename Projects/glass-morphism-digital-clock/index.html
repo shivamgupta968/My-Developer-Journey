@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10172a" />
+  <title>Glass Morphism Digital Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Timeglass home"><span class="brand-mark">◷</span> TIMEGLASS</a>
+      <div class="top-actions">
+        <span class="live"><i></i> LIVE TIME</span>
+        <button id="themeBtn" class="icon-btn" aria-label="Toggle light and dark theme" title="Toggle theme">☼</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">YOUR MOMENT, RIGHT NOW</p>
+      <h1>Time, in a clearer <em>light.</em></h1>
+      <p class="subtitle">A little space to pause, breathe, and stay in sync.</p>
+
+      <div class="clock-card">
+        <div class="card-top">
+          <span class="timezone-label"><span class="pin">⌖</span> LOCAL TIME</span>
+          <button id="formatBtn" class="format-btn">12-HOUR <span>↔</span></button>
+        </div>
+        <div class="digital" aria-live="off">
+          <span id="hours">--</span><span class="colon">:</span><span id="minutes">--</span><span class="seconds" id="seconds">--</span>
+          <span id="ampm" class="ampm">AM</span>
+        </div>
+        <div class="date-row"><span class="date-dot"></span><span id="date">Loading date…</span></div>
+        <div class="card-divider"></div>
+        <div class="bottom-row">
+          <div class="timezone"><span class="mini-icon">◎</span><div><small>TIME ZONE</small><strong id="timezone">Detecting…</strong></div></div>
+          <div class="utc"><small>UTC OFFSET</small><strong id="offset">--</strong></div>
+        </div>
+      </div>
+
+      <div class="analog-wrap">
+        <div class="analog-title">A DIFFERENT PERSPECTIVE <span>✳</span></div>
+        <div class="analog-clock" aria-label="Analog clock">
+          <div class="tick t1"></div><div class="tick t2"></div><div class="tick t3"></div><div class="tick t4"></div>
+          <div class="hand hour-hand" id="hourHand"></div>
+          <div class="hand minute-hand" id="minuteHand"></div>
+          <div class="hand second-hand" id="secondHand"></div>
+          <div class="hub"></div>
+        </div>
+      </div>
+    </section>
+    <footer><span>DESIGNED FOR THE PRESENT</span><span>TAKE A MOMENT <b>✦</b></span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
