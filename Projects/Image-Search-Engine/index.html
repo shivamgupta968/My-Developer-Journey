@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Search beautiful images with the Image Search Engine." />
+  <title>Image Search Engine</title>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://api.unsplash.com" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Image Search Engine home"><span class="brand-icon">✦</span> Image<span>Finder</span></a>
+    <span class="top-note">Discover beautiful images</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR VISUAL INSPIRATION</p>
+      <h1>Find images that<br /><span>tell your story.</span></h1>
+      <p class="hero-copy">Explore beautiful photography from around the world. Search any topic to get inspired.</p>
+      <form id="searchForm" class="search-box">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Try “mountains”, “architecture”, “coffee”..." autocomplete="off" aria-label="Search images" />
+        <button id="searchButton" type="submit">Search <span>↗</span></button>
+      </form>
+      <div class="suggestions" aria-label="Popular searches">
+        <span>Popular:</span>
+        <button data-query="nature">Nature</button><button data-query="architecture">Architecture</button><button data-query="travel">Travel</button><button data-query="minimal">Minimal</button><button data-query="food">Food</button>
+      </div>
+    </section>
+
+    <section class="results-section">
+      <div class="results-heading">
+        <div><h2 id="resultsTitle">Explore inspiration</h2><p id="resultsSubtitle">A curated collection to get you started</p></div>
+        <span id="resultCount" class="count"></span>
+      </div>
+      <div id="status" class="status" hidden></div>
+      <div id="gallery" class="gallery" aria-live="polite"></div>
+      <button id="loadMore" class="load-more" hidden>Load more images</button>
+    </section>
+  </main>
+
+  <footer><span>✦ ImageFinder</span><span>Made for discovering your next inspiration.</span></footer>
+
+  <dialog id="lightbox" class="lightbox">
+    <button class="close-modal" id="closeModal" aria-label="Close">×</button>
+    <button class="modal-prev" id="prevImage" aria-label="Previous image">‹</button>
+    <div class="modal-content">
+      <img id="modalImage" alt="" />
+      <div class="modal-info"><div><strong id="modalTitle">Image</strong><span id="modalCredit"></span></div><a id="downloadLink" class="download-btn" target="_blank" rel="noopener">↧ Download</a></div>
+    </div>
+    <button class="modal-next" id="nextImage" aria-label="Next image">›</button>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
