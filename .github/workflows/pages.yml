@@ -1,4 +1,5 @@
-﻿name: Deploy OIBSIP Projects
+﻿
+name: Deploy OIBSIP Projects
 
 on:
   push:
@@ -26,6 +27,13 @@ jobs:
           cp -R WebDev-L2-TributePage site/
           cp -R WebDev-L2-ToDoWebApp site/
           cp -R WebDev-L2-LoginAuthenticationSystem site/
+          cp -R Projects/Contact-Management-System site/
+          cp -R Projects/glass-morphism-digital-clock site/
+          cp -R Projects/Image-Search-Engine site/
+          cp -R Projects/login-system site/
+          cp -R Projects/QuizQuest site/
+          cp -R Projects/taskflow-todo-app site/
+          cp -R Projects/Wedding-Planner-Website site/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
