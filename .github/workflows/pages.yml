@@ -1,9 +1,8 @@
-﻿name: Deploy Tribute Page
+﻿name: Deploy OIBSIP Projects
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -11,44 +10,36 @@ permissions:
 
 jobs:
   build:
-    name: Build and upload website
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure GitHub Pages
+      - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Verify website files
+      - name: Prepare website
         run: |
-          test -f WebDev-L2-TributePage/index.html
-          test -f WebDev-L2-TributePage/style.css
-          test -f WebDev-L2-TributePage/script.js
-          echo "All website files found."
+          mkdir -p site
+          cp index.html site/
+          cp -R WebDev-L2-TributePage site/
+          cp -R WebDev-L2-ToDoWebApp site/
 
-      - name: Upload GitHub Pages artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./WebDev-L2-TributePage
-          name: github-pages
+          path: ./site
 
   deploy:
-    name: Deploy website
     needs: build
     runs-on: ubuntu-latest
-
     permissions:
-      contents: read
       pages: write
       id-token: write
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
