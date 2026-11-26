@@ -22,6 +22,7 @@ jobs:
         run: |
           mkdir -p site
           cp index.html site/
+          cp -R WebDev-L2-Calculator site/
           cp -R WebDev-L2-TributePage site/
           cp -R WebDev-L2-ToDoWebApp site/
 
