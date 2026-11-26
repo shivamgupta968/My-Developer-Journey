@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecureSpace — Developer Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell" id="authShell">
+<section class="hero">
+<a class="brand" href="#"><b>S</b> secure<span>space</span></a>
+<div class="hero-copy"><small>YOUR SPACE. YOUR CONTROL.</small><h1>Everything you need.<br><em>One secure place.</em></h1><p>Sign in to continue your journey, or create an account to get started.</p></div>
+<div class="community"><span>JD</span><span>AM</span><span>RK</span><b>+2k</b><label>Join a growing community</label></div>
+</section>
+<section class="panel">
+<div class="mobile-brand"><b>S</b> securespace</div>
+<div class="content">
+<div class="eyebrow" id="eyebrow">WELCOME BACK</div><h2 id="title">Sign in to your account</h2><p class="sub" id="subtitle">Enter your details to access your dashboard.</p>
+<div class="tabs"><button id="loginTab" class="active" type="button">Sign in</button><button id="signupTab" type="button">Create account</button></div>
+<div id="notice" class="notice" role="status" aria-live="polite"></div>
+<form id="authForm" novalidate>
+<div class="field" id="nameField" hidden><label for="name">Full name</label><input id="name" placeholder="Your full name" autocomplete="name"><small id="nameError"></small></div>
+<div class="field"><label for="email">Email address</label><input id="email" type="email" placeholder="you@example.com" autocomplete="email"><small id="emailError"></small></div>
+<div class="field"><div class="label-row"><label for="password">Password</label><button type="button" class="link" id="forgot">Forgot password?</button></div><div class="password"><input id="password" type="password" placeholder="Enter your password" autocomplete="current-password"><button type="button" id="toggle">Show</button></div><small id="passwordError"></small><div id="strength" hidden><div class="track"><span id="bar"></span></div><small id="strengthText">Password strength</small></div></div>
+<div class="field" id="confirmField" hidden><label for="confirm">Confirm password</label><input id="confirm" type="password" placeholder="Re-enter your password"><small id="confirmError"></small></div>
+<div class="options" id="loginOptions"><label><input type="checkbox" id="remember"> Remember me</label><span>● Private session</span></div>
+<label class="terms" id="termsRow" hidden><input type="checkbox" id="terms"> I agree to the <a href="#" id="termsLink">terms and conditions</a>.</label>
+<button class="submit" type="submit"><span id="submitText">Sign in</span><b>→</b></button>
+</form>
+<div class="divider">DEMO PROJECT</div><p class="switch" id="switchCopy">New to SecureSpace? <button type="button" id="switchMode">Create an account</button></p>
+<p class="hint">Frontend demonstration · Do not use real or sensitive passwords.</p>
+</div><footer>© 2026 SecureSpace. Built for learning.</footer>
+</section>
+</main>
+
+<main class="dashboard" id="dashboard" hidden>
+<header class="dash-nav">
+<a class="brand dark-brand" href="#"><b>S</b> secure<span>space</span></a>
+<div class="nav-right"><span class="online-dot"></span><span>Developer workspace</span><button id="logout" class="logout">Log out ↗</button></div>
+</header>
+<section class="welcome">
+<div class="welcome-copy"><div class="eyebrow light">YOUR NEXT CHAPTER STARTS HERE</div><p class="hello">Welcome aboard, <strong id="welcomeName">Developer</strong> 👋</p>
+<h1>Dream it. Build it.<br><em>Make it happen.</em></h1>
+<p class="welcome-text">Every expert developer was once a beginner who refused to give up. Keep learning, keep building, and let your code create something meaningful.</p>
+<div class="welcome-actions"><a href="#journey" class="primary-link">Explore your workspace <span>→</span></a><span class="today">One line of code at a time.</span></div>
+</div>
+<div class="code-card" aria-label="Motivational code illustration"><div class="code-top"><i></i><i></i><i></i><span>developer.js</span></div><pre><span class="code-purple">const</span> <span class="code-blue">developer</span> = {
+  mindset: <span class="code-green">"keep learning"</span>,
+  passion: <span class="code-green">"build the future"</span>,
+  errors: <span class="code-orange">"lessons learned"</span>,
+  success: <span class="code-purple">true</span>
+};
+
+<span class="code-blue">developer</span>.<span class="code-yellow">grow</span>();
+<span class="code-comment">// Your journey starts now ✨</span></pre><div class="code-bottom"><span>● All systems ready</span><span>JavaScript · Creativity</span></div></div>
+</section>
+<section class="journey" id="journey">
+<div class="section-heading"><div><div class="eyebrow">YOUR DEVELOPER JOURNEY</div><h2>Make today count.</h2></div><p>Small progress every day leads to big achievements.</p></div>
+<div class="journey-grid">
+<article class="journey-card"><div class="card-icon purple-icon">⌘</div><h3>Keep learning</h3><p>Explore new concepts, sharpen your skills, and stay curious. Your knowledge is your superpower.</p><span class="card-foot">01 / LEARN</span></article>
+<article class="journey-card"><div class="card-icon green-icon">⚡</div><h3>Build with purpose</h3><p>Turn ideas into real projects. Every feature you create makes you a stronger problem solver.</p><span class="card-foot">02 / CREATE</span></article>
+<article class="journey-card"><div class="card-icon orange-icon">↗</div><h3>Never give up</h3><p>Bugs are not failures; they are clues. Debug patiently, keep experimenting, and move forward.</p><span class="card-foot">03 / GROW</span></article>
+</div>
+<div class="quote"><span>“</span><p>Great things are built one commit at a time. Trust your process, stay consistent, and keep shipping.</p><small>— A NOTE FOR YOUR DEVELOPER JOURNEY</small></div>
+</section>
+<footer class="dash-footer">Made for curious minds and future software developers. <span>Keep coding. Keep growing. ✦</span></footer>
+</main>
+<script src="script.js"></script>
+</body></html>

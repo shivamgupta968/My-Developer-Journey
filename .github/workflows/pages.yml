@@ -25,6 +25,7 @@ jobs:
           cp -R WebDev-L2-Calculator site/
           cp -R WebDev-L2-TributePage site/
           cp -R WebDev-L2-ToDoWebApp site/
+          cp -R WebDev-L2-LoginAuthenticationSystem site/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

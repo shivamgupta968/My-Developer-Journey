@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecureSpace — Login Authentication</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+<section class="hero">
+<a class="brand" href="#"><b>S</b> secure<span>space</span></a>
+<div class="hero-copy"><small>YOUR SPACE. YOUR CONTROL.</small><h1>Everything you need.<br><em>One secure place.</em></h1><p>Sign in to continue your journey, or create an account to get started.</p></div>
+<div class="community"><span>JD</span><span>AM</span><span>RK</span><b>+2k</b><label>Join a growing community</label></div>
+</section>
+<section class="panel">
+<div class="mobile-brand"><b>S</b> securespace</div>
+<div class="content">
+<div class="eyebrow" id="eyebrow">WELCOME BACK</div><h2 id="title">Sign in to your account</h2><p class="sub" id="subtitle">Enter your details to access your dashboard.</p>
+<div class="tabs"><button id="loginTab" class="active" type="button">Sign in</button><button id="signupTab" type="button">Create account</button></div>
+<div id="notice" class="notice" role="status" aria-live="polite"></div>
+<form id="authForm" novalidate>
+<div class="field" id="nameField" hidden><label for="name">Full name</label><input id="name" placeholder="Your full name" autocomplete="name"><small id="nameError"></small></div>
+<div class="field"><label for="email">Email address</label><input id="email" type="email" placeholder="you@example.com" autocomplete="email"><small id="emailError"></small></div>
+<div class="field"><div class="label-row"><label for="password">Password</label><button type="button" class="link" id="forgot">Forgot password?</button></div><div class="password"><input id="password" type="password" placeholder="Enter your password" autocomplete="current-password"><button type="button" id="toggle">Show</button></div><small id="passwordError"></small><div id="strength" hidden><div class="track"><span id="bar"></span></div><small id="strengthText">Password strength</small></div></div>
+<div class="field" id="confirmField" hidden><label for="confirm">Confirm password</label><input id="confirm" type="password" placeholder="Re-enter your password"><small id="confirmError"></small></div>
+<div class="options" id="loginOptions"><label><input type="checkbox" id="remember"> Remember me</label><span>● Private session</span></div>
+<label class="terms" id="termsRow" hidden><input type="checkbox" id="terms"> I agree to the <a href="#" id="termsLink">terms and conditions</a>.</label>
+<button class="submit" type="submit"><span id="submitText">Sign in</span><b>→</b></button>
+</form>
+<div class="divider">DEMO PROJECT</div><p class="switch" id="switchCopy">New to SecureSpace? <button type="button" id="switchMode">Create an account</button></p>
+<p class="hint">Frontend demonstration · Do not use real or sensitive passwords.</p>
+</div><footer>© 2026 SecureSpace. Built for learning.</footer>
+</section>
+</main>
+<script src="script.js"></script>
+</body></html>
