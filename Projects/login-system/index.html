@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A polished, responsive login experience with client-side validation and a demo dashboard." />
+  <title>Login System — Secure Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="visual-panel" aria-label="Welcome">
+      <div class="brand"><span class="brand-mark">✦</span> <span>Northstar</span></div>
+      <div class="visual-copy">
+        <p class="eyebrow">YOUR WORKSPACE, REIMAGINED</p>
+        <h1>Everything you need.<br><span>One secure place.</span></h1>
+        <p class="lead">A calmer, clearer way to get your best work done. Welcome back to your space.</p>
+      </div>
+      <div class="decor-orb orb-one"></div><div class="decor-orb orb-two"></div>
+      <div class="quote-card"><div class="quote-stars">★★★★★</div><p>“A little more focus. A lot more possibility.”</p><span>— The Northstar team</span></div>
+      <div class="visual-footer"><span>© 2026 Northstar</span><span>Privacy&nbsp; · &nbsp;Security&nbsp; · &nbsp;Help</span></div>
+    </section>
+    <section class="login-panel">
+      <div class="panel-top"><span class="mobile-brand"><span class="brand-mark">✦</span> Northstar</span><span class="secure-pill"><span class="dot"></span> Secure sign in</span></div>
+      <div id="loginView" class="form-wrap">
+        <div class="welcome-icon">↗</div>
+        <p class="eyebrow form-eyebrow">WELCOME BACK</p>
+        <h2>Sign in to your account</h2>
+        <p class="subtext">Enter your details below to access your workspace.</p>
+        <form id="loginForm" novalidate>
+          <div class="field-group">
+            <label for="email">Email address</label>
+            <div class="input-wrap"><span class="input-icon">✉</span><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required /><span id="emailStatus" class="field-status"></span></div>
+            <p class="field-error" id="emailError"></p>
+          </div>
+          <div class="field-group">
+            <div class="label-row"><label for="password">Password</label><a href="#" id="forgotLink">Forgot password?</a></div>
+            <div class="input-wrap"><span class="input-icon">▣</span><input id="password" type="password" autocomplete="current-password" placeholder="Enter your password" required /><button type="button" class="show-password" id="togglePassword" aria-label="Show password">Show</button></div>
+            <div class="strength-wrap" id="strengthWrap"><div class="strength-track"><span id="strengthBar"></span></div><span id="strengthText">Password strength</span></div>
+            <p class="field-error" id="passwordError"></p>
+          </div>
+          <label class="remember"><input type="checkbox" id="remember" checked /><span class="checkmark"></span> Remember me for 7 days</label>
+          <div class="form-alert" id="formAlert" role="alert"></div>
+          <button type="submit" class="submit-btn" id="submitBtn"><span>Sign in</span><span class="arrow">→</span></button>
+        </form>
+        <div class="demo-note"><span class="demo-icon">✧</span><div><strong>Demo access</strong><p>Use any valid email and a password with 8+ characters.</p></div></div>
+        <p class="signup">New to Northstar? <a href="#" id="signupLink">Create an account</a></p>
+      </div>
+      <div id="dashboardView" class="form-wrap dashboard hidden">
+        <div class="welcome-icon">✓</div><p class="eyebrow form-eyebrow">AUTHENTICATION SUCCESSFUL</p><h2>You're signed in!</h2><p class="subtext">Welcome to your workspace. Your demo session is active.</p>
+        <div class="profile-card"><div class="avatar" id="avatar">N</div><div><strong id="userName">User</strong><p id="userEmail">user@example.com</p></div><span class="online-dot"></span></div>
+        <div class="dash-grid"><div class="dash-tile"><span>Workspace</span><strong>Ready to go</strong><small>All systems operational</small></div><div class="dash-tile"><span>Session</span><strong>Protected</strong><small>Client-side demo session</small></div></div>
+        <button class="submit-btn" id="logoutBtn"><span>Log out</span><span class="arrow">↗</span></button><p class="signup">This is a front-end demo. No real account data is sent.</p>
+      </div>
+      <div id="resetView" class="form-wrap hidden"><div class="welcome-icon">✉</div><p class="eyebrow form-eyebrow">PASSWORD RECOVERY</p><h2>Reset your password</h2><p class="subtext">Enter your email and we’ll show a demo confirmation.</p><form id="resetForm"><div class="field-group"><label for="resetEmail">Email address</label><div class="input-wrap"><span class="input-icon">✉</span><input id="resetEmail" type="email" placeholder="you@example.com" required></div><p class="field-error" id="resetError"></p></div><div class="form-alert" id="resetAlert" role="status"></div><button class="submit-btn" type="submit"><span>Send reset link</span><span class="arrow">→</span></button></form><p class="signup"><a href="#" id="backLogin">← Back to sign in</a></p></div>
+      <footer class="panel-footer"><span>Protected by Northstar security</span><span>v1.0.0</span></footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
